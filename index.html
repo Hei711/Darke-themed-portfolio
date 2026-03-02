@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngaaruhe Hei</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fAwesome.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAV ================= -->
+    <nav id="desktop-nav">
+      <div class="logo">Ngaaruhe Hei</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Ngaaruhe Hei</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ================= PROFILE ================= -->
+    <section id="profile">
+      <div class="section__text">
+        <p>Hallo, I am</p>
+        <h1>Ngaaruhe Hei</h1>
+        <p class="section__text">Software Developer || MERN Stack Enthusiast || Aspiring Data Engineer 👩🏾‍💻</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/N Hei CV nn.pdf')">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href = './#contact'">Contact Info</button>
+        </div>
+        <div id="social-container">
+          <i class="fa-brands fa-linkedin social-icon" onclick="location.href='https://www.linkedin.com/'"></i>
+          <i class="fa-brands fa-github social-icon" onclick="location.href='https://github.com/Hei711'"></i>
+        </div>
+      </div>
+      <i class="fa-solid fa-arrow-down icon arrow" onclick="location.href='#about'"></i>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div><img src="./assets/dev.jpg" alt="profile picture" class="about-pic" /></div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <i class="fa-solid fa-briefcase about-icon"></i>
+              <h3>Experience</h3>
+              <p>2+ years <br />Software Development</p>
+            </div>
+            <div class="details-container">
+              <i class="fa-solid fa-graduation-cap about-icon"></i>
+              <h3>Education</h3>
+              <p>B.Sc. Bachelors <br />Namibian University of Science and Technology</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>I am a driven and ambitious Computer Science enthusiast specializing in software development. I am committed to excellence, continuously sharpening my skills and adapting to new technologies. With a strong work ethic and a passion for growth, I seek mentorship, hands-on experience, and collaboration.</p>
+          </div>
+        </div>
+      </div>
+      <i class="fa-solid fa-arrow-down icon arrow" onclick="location.href='#experience'"></i>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item">
+          <img src="./assets/lotsLOGO.png" alt="Legion logo" class="company-logo" />
+          <div class="timeline-content">
+            <h3 class="role">Software Engineer Intern</h3>
+            <p class="company">Legion Business Operations Consulting and Technologies · Full-time</p>
+            <p class="duration-location">
+              Aug 2024 - Jan 2025 · 6 mos · Windhoek, Khomas, Namibia · On-site
+            </p>
+            <p class="skills">Manual Testing, Jira, HTML, CSS</p>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item">
+          <img src="./assets/kellLOGO.png" alt="Kellerman ICT logo" class="company-logo" />
+          <div class="timeline-content">
+            <h3 class="role">Software Developer Intern</h3>
+            <p class="company">Kellerman ICT Pty Ltd · Full-time</p>
+            <p class="duration-location">
+              Jan 2024 - Jun 2024 · 6 mos · Windhoek, Namibia · On-site
+            </p>
+            <p class="skills">Express.js, Node.js, Web Applications, JavaScript, Git, HTML, CSS, React, MongoDB, REST APIs</p>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="timeline-item">
+          <img src="./assets/bonLOGO.png" alt="Bank of Namibia logo" class="company-logo" />
+          <div class="timeline-content">
+            <h3 class="role">Internal IT Auditor Intern</h3>
+            <p class="company">Bank of Namibia · Internship</p>
+            <p class="duration-location">
+              Oct 2023 - Jan 2024 · 4 mos · Windhoek, Khomas, Namibia
+            </p>
+            <p class="skills">Data Analysis, Excel, SQL, Internal Auditing, Risk Assessment</p>
+          </div>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="timeline-item">
+          <img src="./assets/gmobility.png" alt="G Mobility logo" class="company-logo" />
+          <div class="timeline-content">
+            <h3 class="role">Software Engineer Intern</h3>
+            <p class="company">G Mobility Investment Technology CC · Full-time</p>
+            <p class="duration-location">
+              Feb 2023 - Sep 2023 · 8 mos · Windhoek, Khomas, Namibia · On-site
+            </p>
+            <p class="skills">Express.js, Node.js, Web Applications, React, MongoDB, REST APIs, Git, GitHub</p>
+          </div>
+        </div>
+      </div>
+
+      <i class="fa-solid fa-arrow-down icon arrow" onclick="location.href='#projects'"></i>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+
+      <div class="projects-grid">
+        <!-- Project Card -->
+        <div class="project-card">
+          <div class="project-img-container">
+            <img src="./assets/proj.png" alt="Project 1" class="project-img">
+          </div>
+          <h2 class="project-title">Portfolio Website</h2>
+          <p class="project-description">
+            A personal portfolio website showcasing my skills, projects, and experience using HTML, CSS, and JavaScript.
+          </p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Hei711'">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Hei711'">Live Demo</button>
+          </div>
+        </div>
+      </div>
+
+      <i class="fa-solid fa-arrow-down icon arrow" onclick="location.href='#contact'"></i>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+
+      <div class="contact-container">
+        <!-- Left Side: Contact Cards -->
+        <div class="contact-cards">
+          <div class="contact-card">
+            <i class="fa-solid fa-envelope contact-icon"></i>
+            <p><a href="mailto:ngaaruhehei11@gmail.com">ngaaruhehei11@gmail.com</a></p>
+          </div>
+          <div class="contact-card">
+            <i class="fa-brands fa-linkedin contact-icon"></i>
+            <p><a href="https://www.linkedin.com/in/ngaaruhe-hei-786833261/">LinkedIn</a></p>
+          </div>
+          <div class="contact-card">
+            <i class="fa-solid fa-phone contact-icon"></i>
+            <p>+264 81 7917888</p>
+          </div>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <form id="contact-form" class="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="message" rows="7" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn-color-1">Send Message</button>
+        </form>
+      </div>
+
+      <i class="fa-solid fa-arrow-up icon arrow" onclick="location.href='#profile'"></i>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer">
+      <p>&copy; 2026 Ngaaruhe Hei. All rights reserved.</p>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+      // Hamburger toggle
+      function toggleMenu() {
+        const menu = document.querySelector(".menu-links");
+        menu.classList.toggle("open");
+      }
+
+      // Contact Form Submission using mailto
+      const form = document.getElementById('contact-form');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault(); // prevent page reload
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Create mailto link
+        const mailtoLink = `mailto:ngaaruhehei11@gmail.com?subject=${encodeURIComponent("Portfolio Contact: " + name)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+
+        // Open user's email client
+        window.location.href = mailtoLink;
+
+        // Alert user
+        alert("If your email client opened, your message is ready to send. Otherwise, make sure you have a default email client configured.");
+
+        // Reset form
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
