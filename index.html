@@ -68,12 +68,9 @@
   <h1 class="title">About Me</h1>
 
   <div class="about-section-container">
-    <!-- Left Half: Profile Image -->
     <div class="about-image">
       <img src="./assets/dev.jpg" alt="profile picture" class="about-pic" />
-    </div>
-
-    <!-- Right Half: Details -->
+    </div>  
     <div class="about-details-container">
       <div class="about-cards">
         <div class="details-container">
@@ -164,7 +161,6 @@
       <h1 class="title">Projects</h1>
 
       <div class="projects-grid">
-        <!-- Project Card -->
         <div class="project-card">
           <div class="project-img-container">
             <img src="./assets/proj.png" alt="Project 1" class="project-img">
@@ -183,76 +179,64 @@
       <i class="fa-solid fa-arrow-down icon arrow" onclick="location.href='#contact'"></i>
     </section>
 
-    <!-- ================= CONTACT ================= -->
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <p class="section__text__p1">Get in Touch</p>
+  <h1 class="title">Contact Me</h1>
 
-      <div class="contact-container">
-        
-        <div class="contact-cards">
-          <div class="contact-card">
-            <i class="fa-solid fa-envelope contact-icon"></i>
-            <p><a href="mailto:ngaaruhehei11@gmail.com">ngaaruhehei11@gmail.com</a></p>
-          </div>
-          <div class="contact-card">
-            <i class="fa-brands fa-linkedin contact-icon"></i>
-            <p><a href="https://www.linkedin.com/in/ngaaruhe-hei-786833261/">LinkedIn</a></p>
-          </div>
-          <div class="contact-card">
-            <i class="fa-solid fa-phone contact-icon"></i>
-            <p>+264 81 7917888</p>
-          </div>
-        </div>
-
-       
-        <form id="contact-form" class="contact-form">
-          <input type="text" id="name" placeholder="Your Name" required>
-          <input type="email" id="email" placeholder="Your Email" required>
-          <textarea id="message" rows="7" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn btn-color-1">Send Message</button>
-        </form>
+  <div class="contact-container">
+    
+    <div class="contact-cards">
+      <div class="contact-card">
+        <i class="fa-solid fa-envelope contact-icon"></i>
+        <p><a href="mailto:ngaaruhehei11@gmail.com">ngaaruhehei11@gmail.com</a></p>
       </div>
+      <div class="contact-card">
+        <i class="fa-brands fa-linkedin contact-icon"></i>
+        <p><a href="https://www.linkedin.com/in/ngaaruhe-hei-786833261/">LinkedIn</a></p>
+      </div>
+      <div class="contact-card">
+        <i class="fa-solid fa-phone contact-icon"></i>
+        <p>+264 81 7917888</p>
+      </div>
+    </div>
 
-      <i class="fa-solid fa-arrow-up icon arrow" onclick="location.href='#profile'"></i>
-    </section>
+    <!-- Right Side: Contact Form -->
+    <form id="contact-form" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="7" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-color-1">Send Message</button>
+    </form>
+  </div>
 
+  <i class="fa-solid fa-arrow-up icon arrow" onclick="location.href='#profile'"></i>
+</section>
 
-    <!-- ================= FOOTER ================= -->
-    <footer id="footer">
-      <p>&copy; 2026 Ngaaruhe Hei. All rights reserved.</p>
-    </footer>
+<!-- ================= JAVASCRIPT ================= -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("QHHx3M3aW-KRsanBs");
 
-    <!-- ================= JAVASCRIPT ================= -->
-    <script>
-      // Hamburger toggle
-      function toggleMenu() {
-        const menu = document.querySelector(".menu-links");
-        menu.classList.toggle("open");
-      }
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-      // Contact Form Submission using mailto
-      const form = document.getElementById('contact-form');
+    const formData = {
+      from_name: document.getElementById('name').value,
+      from_email: document.getElementById('email').value,
+      message: document.getElementById('message').value
+    };
 
-      form.addEventListener('submit', function(e) {
-        e.preventDefault(); // prevent page reload
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        // Create mailto link
-        const mailtoLink = `mailto:ngaaruhehei11@gmail.com?subject=${encodeURIComponent("Portfolio Contact: " + name)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
-
-        // Open user's email client
-        window.location.href = mailtoLink;
-
-        // Alert user
-        alert("If your email client opened, your message is ready to send. Otherwise, make sure you have a default email client configured.");
-
-        // Reset form
+    emailjs.send('service_y1cttjm', 'template_sq47jqv', formData)
+      .then(function(response) {
+        alert('Message sent successfully!');
         form.reset();
+      }, function(error) {
+        console.error('FAILED...', error);
+        alert('Oops! Something went wrong. Check your public key, template, and Gmail settings.');
       });
-    </script>
+  });
+</script>
   </body>
 </html>
