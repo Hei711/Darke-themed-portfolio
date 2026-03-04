@@ -125,8 +125,6 @@ nav {
   max-height: 300px;
 }
 
-/* ================= MOBILE ================= */
-
 @media screen and (max-width: 768px) {
   #desktop-nav {
     display: none;
@@ -137,6 +135,10 @@ nav {
     justify-content: space-between;
     align-items: center;
   }
+  .arrow {
+    display: none;
+  }
+  
 }
 
 /* ================= PROFILE SECTION ================= */
