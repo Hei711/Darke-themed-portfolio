@@ -514,6 +514,7 @@ article p {
   flex-direction: column;
   align-items: center;
   transition: all 0.3s ease;
+  justify-content: space-between;
 }
 
 .project-card:hover {
@@ -557,12 +558,11 @@ article p {
   line-height: 1.4;
 }
 
-.project-btn {
-  padding: 6px 14px;
-  font-size: 0.8rem;
-  border-radius: 20px;
+.project-buttons {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
 }
-
 .btn-container {
   display: flex;
   gap: 10px;
@@ -628,12 +628,10 @@ article p {
 .contact-card {
   display: flex;
   align-items: center;
-  gap: 15px;
-  background: #111827;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #1f2937;
-  transition: 0.3s;
+  gap: 12px;
+  padding: 12px 0;
+  border: none;
+  background: transparent;
 }
 
 .contact-card:hover {
@@ -643,10 +641,9 @@ article p {
 
 /* ICON ONLY STYLE */
 .contact-icon {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #38bdf8;
-  cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .contact-icon:hover {
@@ -690,16 +687,11 @@ article p {
 }
 
 .contact-form button {
-  padding: 12px;
+  width: fit-content;
+  padding: 10px 25px;
   border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  background: #38bdf8;
-  color: #0f172a;
-  transition: 0.3s;
+  align-self: flex-start;
 }
-
 .contact-form button:hover {
   background: #0ea5e9;
 }
